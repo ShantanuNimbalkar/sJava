@@ -42,7 +42,7 @@ public class CacheService {
     private final CardMasterRepository cardMasterRepository;
 
     /* ---------------------- Cacheable Data Methods ----------------------*/
-    @Cacheable(value = JUSPAY_PAYMENT_METHODS_CACHE, key = "#companyCode.toString()", sync = true)
+    @Cacheable(value = JUSPAY_PAYMENT_METHODS_CACHE, key = "#companyCode.toString()", unless = "#result == null")
     public JuspayPaymentMethods getCachedPaymentMethods(Character companyCode) {
         return juspayGateway.getPaymentMethodsFromGateway(companyCode);
     }
