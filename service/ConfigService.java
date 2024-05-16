@@ -26,6 +26,7 @@ import org.springframework.util.StringUtils;
 import java.sql.Timestamp;
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Objects;
 
 import static com.digit.sms.config.ApplicationProperties.activeProfile;
 import static com.digit.sms.util.Constants.CompanyCode.GENERAL;
@@ -182,20 +183,18 @@ public class ConfigService {
 			if (PROD_PROFILE.equalsIgnoreCase(activeProfile)) {
 				cacheService.updateBlacklistCache(mobileNumberAccess);
 			} else {
+				String userType="NA";
+				if(!ObjectUtils.isEmpty(mobileStatus.getUserType())){
+					mobileNumberAccess.setUserType(mobileStatus.getUserType());
+				}else{
+					mobileNumberAccess.setUserType(userType);
+				}
 				MobileNumberAccess existingEntry = blackListRepo
-						.findTopByMobileNumberAndCompanyCodeOrderByCreatedDateDesc(mobileNumberAccess.getMobileNumber(),
-								mobileNumberAccess.getCompanyCode());
+						.findTop1ByMobileNumberAndUserTypeAndCompanyCodeOrderByCreatedDateDesc(mobileNumberAccess.getMobileNumber(),
+								mobileNumberAccess.getUserType(),mobileNumberAccess.getCompanyCode());
 				if (existingEntry == null
 						|| !existingEntry.getMobileNumberStatus().equals(mobileStatus.getMobileNumberStatus())
-				||!ObjectUtils.isEmpty(mobileStatus.getUserType())) {
-					if(ObjectUtils.isEmpty(existingEntry.getUserType())){
-						String userType="NA";
-						if(!ObjectUtils.isEmpty(mobileStatus.getUserType())){
-							mobileNumberAccess.setUserType(mobileStatus.getUserType());
-						}else{
-							mobileNumberAccess.setUserType(userType);
-						}
-					}
+				|| !existingEntry.getMobileNumberStatus().equals(mobileStatus.getMobileNumberStatus())) {
 					cacheService.updateBlacklistCache(mobileNumberAccess);
 				} else if (existingEntry.getEffectiveTo().before(Timestamp.valueOf(LocalDateTime.now()))
 						&& existingEntry.getMobileNumberStatus().equals(mobileStatus.getMobileNumberStatus())) {
