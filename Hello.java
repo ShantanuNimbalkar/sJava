@@ -22,5 +22,9 @@ System.out.println("Hello");
 	logger.info("Hello");
 	logger.info("Hello");
 	logger.info("Hello");
+	  //new code added on 11-Jul-2024
+	  System.out.println("Hello");
+	  System.out.println("Hello");
+	  System.out.println("H");
   }
 }
