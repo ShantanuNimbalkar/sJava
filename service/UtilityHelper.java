@@ -14,6 +14,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import com.godigit.endorsement.client.SpringRestClient;
 import com.godigit.endorsement.exception.ServiceException;
 import com.godigit.endorsement.model.CamundaRequestModel;
+import com.godigit.endorsement.model.CommunicationParams;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
@@ -498,5 +499,13 @@ public class UtilityHelper {
 
 	public static Map<String, Map<String, Integer>> endtReasonWithPriorityMap() {
 		return endtReasonWithPriority;
+	}
+
+	public static CommunicationParams prepareCommunicationParams(List<String> to, List<String> bcc, List<String> mobileNumber) {
+		CommunicationParams communicationParams = new CommunicationParams();
+		Map<String, List<String>> emailIds = Map.of("to", to, "bcc", bcc);
+		communicationParams.setEmailIds(emailIds);
+		communicationParams.setMobileNumbers(mobileNumber);
+		return communicationParams;
 	}
 }
