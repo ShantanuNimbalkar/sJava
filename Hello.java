@@ -28,5 +28,10 @@ System.out.println("Hello");
 	  System.out.println("Hello");
 	  System.out.println("Hello");
 	  System.out.println("H");
+
+
+
+	   try{}catch(Exception e){}
+	  int ij = 0;
   }
 }
