@@ -2,6 +2,7 @@ package NewDemo;
 
 public class Hello{
   public printSTMT(){
+	  try{}catch(Exception e){}
     System.out.println("Hello");
 	System.out.println("Hello");
 	System.out.println("Hello");
@@ -18,6 +19,7 @@ System.out.println("Hello");
 	logger.info("Hello");
 	logger.info("Hello");
 	logger.info("Hello");
+	  int i =0;
 	logger.info("Hello");
 	logger.info("Hello");
 	logger.info("Hello");
@@ -28,5 +30,10 @@ System.out.println("Hello");
 	  System.out.println("Hello");
 	  System.out.println("Hello");
 	  System.out.println("H");
+
+	  
+	  try{}catch(Exception e){}
+	  try{}catch(Exception e){}
+	  try{}catch(Exception e){}
   }
 }
