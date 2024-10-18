@@ -28,5 +28,9 @@ System.out.println("Hello");
 	  System.out.println("Hello");
 	  System.out.println("Hello");
 	  System.out.println("H");
+
+	 try{}catch(Exception e){}
+ try{}catch(Exception e){}
+ try{}catch(Exception e){}
   }
 }
