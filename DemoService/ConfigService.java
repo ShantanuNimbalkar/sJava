@@ -68,6 +68,11 @@ public class ConfigService {
 			smsConfigProperty.setPropertyValueLife(lifeValue);
 			smsConfigProperty.setCreatedUser(configPropertiesModel.getModifiedUser());
 			smsConfigPropertiesRepo.save(smsConfigProperty);
+			try{
+				
+			}catch(Exception e){
+				System.out.println("Error"+e);
+			}
 			return "Property: '" + configPropertiesModel.getKey() + "' configured successfully.";
 		} else {
 			if (StringUtils.hasText(generalValue)) {
