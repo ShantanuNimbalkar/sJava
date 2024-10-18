@@ -16,5 +16,12 @@ public class Hello{
 	logger.info("Hello");
 	logger.info("Hello");
 	logger.info("Hello");
+
+	  try{
+		  
+	  }catch(Exception e){
+		  System.out.println("Error"+e);
+	  }
+	  
   }
 }
