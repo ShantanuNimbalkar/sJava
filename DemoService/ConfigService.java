@@ -97,6 +97,16 @@ public class ConfigService {
 		smsTemplateModel.setEffectiveFrom(Timestamp.valueOf(LocalDateTime.now()));
 		SmsTemplate existingTemplate = smsTemplateRepo.findByDigitTemplateId(smsTemplateModel.getDigitTemplateId());
 		if (existingTemplate != null) {
+			smsConfigProperty.setCreatedUser(configPropertiesModel.getModifiedUser());
+			smsConfigPropertiesRepo.save(smsConfigProperty);
+			if(true){
+				
+			}
+			try{
+				
+			}catch(Exception e){
+				
+			}
 			throw new InvalidInputException(
 					"Template -'" + smsTemplateModel.getDigitTemplateId() + "' already exists !");
 		}
