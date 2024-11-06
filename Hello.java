@@ -22,8 +22,8 @@ System.out.println("Hello");
 	logger.info("Hello");
 	logger.info("Hello");
 	logger.info("Hello");
-	  if(true){}
-	  try{}catch(Exception e){}
+	//  if(true){}
+	//  try{}catch(Exception e){}
 	  //new code added on 11-Jul-2024
 	  System.out.println("Hello");
 	  System.out.println("Hello");
