@@ -19,12 +19,15 @@
 
 type ProblemMerge = { a: number; b: string } & { a: string; c: number[] };
 
+
 console.log(
   Object.assign({ a: 44, b: "hello" }, { a: "from second object", c: 99 })
 );
 
 // IMPLEMENT ME
 export type Mix<A, B> = never;
+
+export type Mixa<A, B> = never;
 
 /**
  * - ExtractPropertyNamesAssignableTo: obtain the names of properties assignable to a type
@@ -69,7 +72,7 @@ type X = ExtractPropertyNamesAssignableTo<
  *
  */
 
- // IMPLEMENT ME
+// IMPLEMENT ME
 export type OptionalPropertyNamesOf<T> = never;
 
 /**
@@ -84,5 +87,5 @@ export type OptionalPropertyNamesOf<T> = never;
  * 'a'
  */
 
- // IMPLEMENT ME
+// IMPLEMENT ME
 export type RequiredPropertyNamesOf<T> = never;
