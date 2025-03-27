@@ -231,12 +231,12 @@ public class RequestResponseLoggingFilter implements Filter {
 
 
 		storeInLoggingTable(dispatcherLogging);
-
-		if( HttpStatus.INTERNAL_SERVER_ERROR.value() ==code){
+		responseWrapper.copyBodyToResponse();
+		/*if( HttpStatus.INTERNAL_SERVER_ERROR.value() ==code){
 			ratingErrorMasking(responseWrapper,response);
 		}else {
 			responseWrapper.copyBodyToResponse();
-		}
+		}*/
 
 		DigitContext.clear();
 
