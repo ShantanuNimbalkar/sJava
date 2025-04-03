@@ -28,5 +28,6 @@ System.out.println("Hello");
 	  System.out.println("Hello");
 	  System.out.println("Hello");
 	  System.out.println("H");
+	  int value = 200;
   }
 }
