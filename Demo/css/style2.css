@@ -1,0 +1,61 @@
+/* ❌ Universal selector with no restriction */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box
+} /* ❌ Missing semicolon after box-sizing */
+
+.navbar {
+  background-color: #333;
+  color: #fff;
+  padding: 15px 30px;
+  float: left;
+  float: right;
+} /* ❌ Conflicting float properties */
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #eee;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  z-index: 999999;
+} /* ❌ Overly large z-index value */
+
+.title {
+  font-weight: bold;
+  font-weight: 700;
+} /* ❌ Duplicate property with same effect */
+
+p {
+  line-height: 1;
+  font-size: 12px;
+  font-size: small;
+} /* ❌ Conflicting font-size values */
+
+.hidden {
+  display: none;
+  visibility: hidden;
+} /* ❌ Redundant hiding techniques */
+
+ul li a {
+  text-decoration: none;
+  color: #000;
+}
+div {
+    /* ❌ Too general selector - might affect performance or specificity */
+    margin: 0px;
+    padding: 0px;
+    font-size: 14px;
+}
+
+ul > li > a {
+  color: #111;
+} /* ❌ Conflicting selector specificity */
+
+a {
+  color: blue;
+} /* ❌ Global link style override */
