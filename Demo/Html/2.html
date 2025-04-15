@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Test Page</title>
+    <meta charset="UTF-8">
+    <!-- Missing viewport meta tag -->
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" async></script>
+    <script>alert("Inline script!");</script> <!-- Inline script, may be flagged -->
+  </head>
+  <body>
+    <h1>Welcome to My Test Page</h1>
+
+    <img src="logo.png"> <!-- Missing alt attribute -->
+
+    <div id="main-content">
+      <p>This is a paragraph without a closing tag
+      <!-- Unclosed paragraph tag -->
+      
+      <a href="#">Click Here</a>
+      <a href="#">Click Here</a>
+      <!-- Duplicate links with same text -->
+
+      <label>Email</label>
+      <input type="email" name="email">
+      <!-- Label is not explicitly associated with input using "for" attribute -->
+
+      <div>
+        <div>
+          <div>
+            <div>
+              <p>Deeply nested divs</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Too much nesting (could be flagged as complexity issue) -->
+
+      <br>
+      <br> <!-- Multiple <br> tags might be flagged depending on config -->
+
+    </div>
+  </body>
+</html>
