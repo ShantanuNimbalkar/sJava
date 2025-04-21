@@ -28,6 +28,9 @@ System.out.println("Hello");
 	  System.out.println("Hello");
 	  System.out.println("Hello");
 	  System.out.println("H");
+	  System.out.println("H");
+
+	  int abc = 22;
 	  int value = 200;
   }
 }
