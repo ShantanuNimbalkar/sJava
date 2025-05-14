@@ -28,6 +28,7 @@ System.out.println("Hello");
 	  System.out.println("Hello");
 	  System.out.println("Hello");
 	  System.out.println("H");
+	  System.err.println("error");
 	  int value = 200;
   }
 }
