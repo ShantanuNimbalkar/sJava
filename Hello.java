@@ -29,5 +29,12 @@ System.out.println("Hello");
 	  System.out.println("Hello");
 	  System.out.println("H");
 	  int value = 200;
+
+
+	  try{
+		  
+	  }catch(IOException e){
+		  logger.info("Error",e);
+	  }
   }
 }
