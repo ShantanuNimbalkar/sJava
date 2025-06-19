@@ -13,6 +13,7 @@ public class Hello{
 	logger.info("Hello");
 	logger.info("Hello");
 	logger.info("Hello");
+	  int ijk = 123;
 	logger.info("Hello");
   }
 }
