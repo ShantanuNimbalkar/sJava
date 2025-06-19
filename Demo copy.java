@@ -7,7 +7,7 @@ public class Hello{
 	System.out.println("Hello");
 	  System.out.println("Hello");
 	  System.out.println("H");
-	  
+	  int jjj=123;
 	logger.info("Hello");
 	logger.info("Hello");
 	logger.info("Hello");
