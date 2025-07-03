@@ -9,6 +9,7 @@ public class Outer {
   private Inner(){
    int kj=0;
    System.out.println("Hello");
+   int newij = 0;
   }
  }
 }
