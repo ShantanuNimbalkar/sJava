@@ -5,6 +5,9 @@ public class Outer {
   int unusedVariable=100;
  }
  public class Inner {
-  private Inner(){}
+  private Inner(){
+   int kj=0;
+   System.out.println("Hello");
+  }
  }
 }
