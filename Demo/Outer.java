@@ -3,6 +3,8 @@ public class Outer {
   Inner ic = new Inner();//Causes generation of accessor class
  }
  public class Inner {
-  private Inner(){}
+  private Inner(){
+   int gh = 12;
+  }
  }
 }
