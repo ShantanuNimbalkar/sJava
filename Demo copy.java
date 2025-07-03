@@ -17,5 +17,6 @@ public class Hello{
 	  int ijk = 123;
 	  int new_var = 123;
 	logger.info("Hello");
+	   int newVeriable = 123;
   }
 }
