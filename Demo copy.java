@@ -15,5 +15,6 @@ public class Hello{
 	logger.info("Hello");
 	logger.info("Hello");
 	  int unusedVariable = 13;
+	  System.out.println("Hello");
   }
 }
