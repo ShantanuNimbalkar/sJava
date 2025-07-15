@@ -16,5 +16,8 @@ public class Hello {
 	logger.info("Hello");
 	logger.info("Hello");
 	logger.info("Hello");
+	String errorMessage = "";
+	errorMessage = response.readEntity(String.class);
+	throw DigitUnexpectedException.from(errorMessage, response.toString());
   }
 }
