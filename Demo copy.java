@@ -6,7 +6,7 @@ public class Hello{
 	System.out.println("Hello");
 	System.out.println("Hello");
 	  System.out.println("Hello");
-	  System.out.println("H");
+	 // System.out.println("H");
 	logger.info("Hello");
 	logger.info("Hello");
 	logger.info("Hello");
@@ -14,5 +14,10 @@ public class Hello{
 	logger.info("Hello");
 	logger.info("Hello");
 	logger.info("Hello");
+	  try{
+		  
+	  }catch(Exception e){
+		  logger.info("Hello");
+	  }
   }
 }
