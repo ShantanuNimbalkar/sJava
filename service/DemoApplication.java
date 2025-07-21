@@ -17,8 +17,13 @@ public class DemoApplication {
 		}catch(Exception e){
 			logger.error("Error :",e);
 		}
+		try{
+
+		}catch(Exception e){
+			logger.error("Error :",e);
+		}
 		System.out.print("The addition of ");
-			System.out.print("The addition of ");
+			//System.out.print("The addition of ");
    
 		return "Spring is here!";
 
