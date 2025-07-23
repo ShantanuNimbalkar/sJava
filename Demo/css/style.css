@@ -1,0 +1,51 @@
+body {
+  font-family: Arial, sans-serif
+  color: #333;
+} /* ❌ Missing semicolon after font-family */
+
+.container {
+  width: 100%;
+  padding: 20px;
+  padding: 10px;
+} /* ❌ Duplicate property: padding */
+
+#main-content {
+  background: #ffffff;
+  color: #000000;
+  margin-top: -20px;
+  position: absolute;
+  top: 50px
+} /* ❌ Negative margin, ❌ missing semicolon after top */
+
+img {
+  width: 100px;
+  height: 100px;
+  border: 0;
+} /* ❌ Use border: none instead of 0 */
+
+.button {
+  background-color: #4285f4;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 4px
+} /* ❌ Missing semicolon after border-radius */
+
+.button:hover {
+  background-color: #357ae8;
+  text-decoration: underline;
+}
+
+div {
+    /* ❌ Too general selector - might affect performance or specificity */
+    margin: 0px;
+    padding: 0px;
+    font-size: 14px;
+}
+
+/* ❌ Unused class */
+.unused-class {
+  color: red;
+}
