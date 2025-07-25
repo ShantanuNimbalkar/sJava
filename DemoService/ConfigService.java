@@ -76,6 +76,16 @@ public class ConfigService {
 			if (StringUtils.hasText(lifeValue)) {
 				existingProperty.setPropertyValueLife(lifeValue);
 			}
+			System.out.println("Hello");
+	System.out.println("Hello");
+	  System.out.println("Hello");
+	  System.out.println("H");
+	  int unused1 = 123;
+	try{
+		
+	}catch(Exception e){
+		
+	}
 			smsConfigPropertiesRepo.save(existingProperty);
 			return "The values for Property: '" + configPropertiesModel.getKey() + "' updated successfully.";
 		}
