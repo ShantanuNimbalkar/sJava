@@ -84,6 +84,7 @@ public class ConfigService {
 	public void doConfigApiAuthentication(String apiToken) {
 
 		if (log.isInfoEnabled()) {
+			intij =123;
 			log.info("Validating the API Token : " + apiToken);
 		}
 		String authorizedUser = JwtTokenUtil.getUserNameFromToken(apiToken);
