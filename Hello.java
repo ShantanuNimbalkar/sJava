@@ -1,7 +1,7 @@
 package NewDemo;
 
-public class Hello{
-  public printSTMT(){
+public class Hello {
+	public printSTMT(){
     System.out.println("Hello");
 	System.out.println("Hello");
 	System.out.println("Hello");
@@ -22,6 +22,9 @@ System.out.println("Hello");
 	logger.info("Hello");
 	logger.info("Hello");
 	logger.info("Hello");
+	if(true){
+
+	}
 	//  if(true){}
 	//  try{}catch(Exception e){}
 	  //new code added on 11-Jul-2024
