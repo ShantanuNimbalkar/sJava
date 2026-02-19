@@ -1,0 +1,2 @@
+Duplicate found: id1 = 817178, id2 = 848051
+Duplicate found: id1 = 605932, id2 = 598553
